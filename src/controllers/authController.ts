@@ -10,7 +10,7 @@ import { generateToken } from '../services/authServices';
 export const register = async (req:Request, res:Response):Promise<void> => {
 
     const {nombre, email, password}:IUser = req.body;
-
+console.log('object')
     const user = new Usuario({nombre, email, password});
     user.password = await hashPassword(password);
 

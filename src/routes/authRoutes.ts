@@ -6,7 +6,7 @@ import { registeredUser } from '../helpers/registeredUser';
 
 const router = express.Router();
 //ruta para el registro
-router.post('register', [
+router.post('/register', [
     //uso express-validator
     check("nombre","El nombre es obligatorio").not().isEmpty(),
     check("email", "Email es obligatorio").isEmail(), 
